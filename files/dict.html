@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../imgs/support.png">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/config.css">
+    <title>Dictionary</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="../index.html"><img src="../imgs/support.png"></a>
+            <p class="lg-text">Dictionary</p>
+        </header>
+        <section class="main" style="padding-top: 40px;">
+            <table class="tool-table">
+                <tr>
+                    <td class="th">Key</td>
+                    <td class="th">Value</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <script>
+        let keys = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+        let values = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "|", '?']
+        let table = document.querySelector("table")
+        for (let i = 0; i < keys.length; i++) {
+            let tableRow = document.createElement("tr");
+            table.appendChild(tableRow)
+            let keyData = document.createElement("td");
+            keyData.innerText = keys[i];
+            tableRow.appendChild(keyData);
+            let valueData = document.createElement("td");
+            valueData.innerText = values[i];
+            tableRow.appendChild(valueData);
+        }
+    </script>
+</body>
+</html>
